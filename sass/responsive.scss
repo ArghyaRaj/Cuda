@@ -1,0 +1,197 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+@mixin media-xll {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-l {
+    @media screen and (max-width: 980px) {
+        @content;
+    }
+}
+
+@mixin media-m {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-s {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin media-xs {
+    @media screen and (max-width: 360px) {
+        @content;
+    }
+}
+
+
+@include media-xll {
+    header {
+        height: 80vh;
+
+        .hero-text-box{
+            width: 90%;
+        }
+    }
+
+    .row {
+        margin: 0 2rem;
+    }
+
+}
+
+@include media-xl {
+    html {
+        font-size: 57%;
+    }
+
+    header {
+        .main-nav {
+            display: none;
+        }
+    }
+
+    .mobile-menu { 
+        span {
+            display: block;
+        }
+    }
+
+    .testimonial {
+        .client-photo {
+            width: 100%;
+            float: none;
+        }
+
+        .client-review {
+            width: 100%;
+            float: none;
+            text-align: center;
+            margin: 0 2rem;
+        }
+    }
+}
+
+@include media-l {
+    html {
+        font-size: 62.5%;
+    }
+
+    .span_1_of_4 {
+        width: 49.2%;
+
+        &:nth-child(3){
+            margin-left: 0;
+        }
+    }
+}
+
+@include media-m {
+
+    .little-description {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    h1 {
+        font-size: 3.4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+}
+
+@include media-s {
+
+    header {
+        height: 75vh;
+    }
+
+    .span_1_of_4 {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .testimonial {
+        .client-review {
+            margin: 0;
+        }
+
+        .col {
+            &:nth-child(3),
+            &:nth-child(4) {
+                margin-top: 4rem;
+            }
+        }
+    }
+
+    .contact_section {
+        form {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    footer {
+        li {
+            margin: 1rem 2rem;
+        }
+    }
+}
+
+@include media-xs {
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .protfolio_section {
+
+        .protfolio_filter {
+            margin: 2.5rem 0;
+
+            button {
+                font-size: 1.2rem;
+                padding: .5rem 1rem;
+                margin: 0 .2rem;
+            }
+        }
+    }
+}
